@@ -83,7 +83,7 @@ const Testimonial = () => {
                                             <p className='text-zinc-600'>{item.profession}</p>
                                             <span className='flex text-yellow-400 mt-3 text-xl gap-1'>
                                                 {Array.from({length:item.rating},(_,index)=>(
-                                                    <FaStar/>
+                                                    <FaStar key={index}/>
                                                 ))}
                                             </span>
                                         </div>

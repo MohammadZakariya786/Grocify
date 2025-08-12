@@ -43,7 +43,7 @@ const Hero = () => {
             <p className=' text-zinc-600 md:text-lg text-md max-w-[530px] mt-5 mb-10'>From farm to table, we deliver fresh, nutrient-rich products you can trust</p>
             <Button  content="Shop Now"/>
         </div>
-        <div id='box' className='flex-1'><img src={Grocery}  className='h-full w-full' alt="Hero.image"/></div>
+        <div id='box' className='gpu-boost flex-1'><img src={Grocery}  className='h-full w-full' alt="Hero.image"/></div>
         </div>
     </section>
   )
