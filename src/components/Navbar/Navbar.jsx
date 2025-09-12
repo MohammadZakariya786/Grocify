@@ -79,7 +79,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/*Mobile menu*/}
-            <ul className={`flex flex-col gap-y-12 bg-orange-500  rounded-xl p-10 absolute top-30 -left-full transform -translate-x-1/2 items-center gap-x-15 md:hidden font-semibold tracking-wider text-white transition-all duration-500 ${showMenu?"left-1/2":''}`}>
+            <ul className={`flex flex-col gap-y-12 bg-orange-500  rounded-xl p-10 absolute top-[100%] -left-full transform -translate-x-1/2 items-center gap-x-15 md:hidden font-semibold tracking-wider text-white transition-all duration-500 ${showMenu?"left-1/2":''}`}>
                 <li>
                     <Link to="/home" onClick={scrollTopInstant} className='hover:text-orange-500'>Home</Link>
                 </li>

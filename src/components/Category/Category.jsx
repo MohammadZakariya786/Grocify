@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom'
 import { ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
+
 
 gsap.registerPlugin(ScrollTrigger)
 const Category = () => {
@@ -41,8 +44,16 @@ const Category = () => {
             //card
             <div className='flex-1 basis-[300px] hover:drop-shadow-2xl container-card gpu-boost' key={card.id}>
                 {/*cardimage*/}
-                <div className='w-full min-h-[30vh] relative -mb-10'>
-                    <img src={card.image}  className='absolute bottom-0' />
+                <div className='w-full h-[30vh] relative -mb-10'>
+                    <LazyLoadImage
+                              src={card.image}
+                              alt={card.title}
+                              effect="blur" // 👈 gives a blur placeholder
+                              width='100%'
+                              height='100%'
+                              className='absolute bottom-0'
+                            />
+                    {/* <img src={card.image}  className='absolute bottom-0' /> */}
                 </div>
                 {/*cardContent*/}
                 <div className='bg-zinc-100 pt-17 p-8 rounded-xl'>
