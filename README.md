@@ -1,9 +1,9 @@
 
 <p align="center">
-  <img src="src/assets/logo.png" alt="Grocify Logo" width="150"/>
+  <img src="public/icon.png" alt="Grocify Logo" width="150"/>
 </p>
 
-<h1 align="center">🥦 Grocify</h1>
+<h1 align="center">Grocify</h1>
 <p align="center">A premium online grocery marketplace specializing in fresh, organic, high-quality groceries delivered directly to customers' doors.</p>
 
 <p align="center">
@@ -36,37 +36,50 @@
 ---
 
 ## 🌟 Features
-- **Shop by Category:** Browse products by Fruits & Veggies, Dairy & Eggs, and Meat & Seafood.  
-- **Product Listings:** View detailed product cards with images, prices, and categories.  
-- **Animated UI:** Smooth animations using GSAP for engaging transitions.  
-- **Responsive Design:** Fully responsive layout using Tailwind CSS.  
-- **AI Chatbot Support:** Smart virtual assistant for customer queries, with efficient API usage and knowledge base integration.  
-- **Customer Testimonials:** Swiper-based carousel for customer reviews.  
-- **Contact Form:** Easy-to-use contact form for customer support.  
-- **First Order Discount:** Promotional banner for new customers.  
+- 🥦 **Shop by Category:** Browse products by Fruits & Veggies, Dairy & Eggs, and Meat & Seafood.  
+- 🛒 **Product Listings:** View detailed product cards with images, prices, and categories.  
+- ✨ **Animated UI:** Smooth animations using GSAP for engaging transitions.  
+- 📱 **Responsive Design:** Fully responsive layout using Tailwind CSS.  
+- 🤖 **AI Chatbot Support:** Smart virtual assistant for customer queries, with efficient API usage and knowledge base integration.  
+- 🗣️ **Customer Testimonials:** Swiper-based carousel for customer reviews.  
+- 📧 **Contact Form:** Easy-to-use contact form for customer support.  
+- 🎁 **First Order Discount:** Promotional banner for new customers.  
 
 ---
 
 ## 🛠️ Technologies Used
-- **React.js** – Frontend framework  
-- **Tailwind CSS** – Utility-first CSS framework  
-- **GSAP** – Animation library  
-- **React Router** – Routing  
-- **React Icons** – Icon library  
-- **Swiper** – Carousel for testimonials  
+- ⚛️ **React.js** – Frontend framework  
+- 🎨 **Tailwind CSS** – Utility-first CSS framework  
+- 🎬 **GSAP** – Animation library  
+- 🧭 **React Router** – Routing  
+- 🔗 **React Icons** – Icon library  
+- 🎠 **Swiper** – Carousel for testimonials  
 
 ---
 
 ## 🤖 AI Chatbot Design
 The Grocify website features a custom AI chatbot designed for **efficiency, relevance, and cost-effectiveness**:
 
-- **Predefined Q&A Matching:** For common greetings and frequently asked questions (like "hi", "how are you", "what is Grocify"), the chatbot instantly responds using a local set of predefined question-answer pairs. This avoids unnecessary API calls and provides a fast user experience.  
-- **Knowledge Base Integration:** If the user's question does not match any predefined Q&A, the chatbot checks a curated knowledge base for Grocify-related topics. If a relevant topic is found, the chatbot sends the user's question and the matched knowledge base context to the Gemini AI service to generate a context-aware answer.  
-- **API Call Optimization:** The chatbot only calls the Gemini AI API when a user's question is not covered by the predefined Q&A. This reduces API usage and helps avoid hitting rate limits.  
-- **API Key Rotation:** The system uses three API keys for Gemini AI. If one key reaches its usage limit, the chatbot automatically switches to the next available key, ensuring uninterrupted service.  
-- **Domain Restriction:** If a user's question is unrelated to Grocify and does not match any predefined or knowledge base topics, the chatbot politely responds that it only answers questions related to the Grocify website.  
+- 💬 **Predefined Q&A Matching:**  
+  For common greetings and FAQs (like "hi", "how are you", "what is Grocify"), the chatbot instantly responds using a local set of predefined question-answer pairs.  
+  This avoids unnecessary API calls and ensures fast responses.
 
-This approach balances **performance, cost, and user experience**, ensuring the chatbot is both helpful and efficient.  
+- 📚 **Knowledge Base Integration:**  
+  If the user's question does not match any predefined Q&A, the chatbot checks a curated knowledge base for Grocify-related topics.  
+  Relevant questions are sent to the Gemini AI service for context-aware answers.
+
+- ⚡ **API Call Optimization:**  
+  Only calls Gemini AI when needed, reducing API usage and avoiding rate limits.
+
+- 🔄 **API Key Rotation:**  
+  Uses three Gemini AI keys; automatically switches if one reaches its limit, ensuring uninterrupted service.
+
+- 🚫 **Domain Restriction:**  
+  If a question is unrelated to Grocify, the chatbot politely responds that it only answers questions related to the Grocify website.
+ 
+
+> This approach balances **performance, cost, and user experience**, making the chatbot efficient and helpful.
+
 
 ---
 
@@ -149,3 +162,9 @@ The `vercel.json` file is included for custom routing.
 
 ## 📜 License
 This project is licensed under the **MIT License**
+
+
+---
+
+If you like **Grocify**, give it a ⭐ on [GitHub](https://github.com/MohammadZakariya786/Grocify) and support the project!
+
