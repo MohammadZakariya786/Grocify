@@ -4,7 +4,7 @@
 </p>
 
 <h1 align="center">Grocify</h1>
-<p align="center">A premium online grocery marketplace specializing in fresh, organic, high-quality groceries delivered directly to customers' doors.</p>
+<p align="center">A modern, responsive online grocery website, built with React, Tailwind CSS, and GSAP for smooth animations and seamless user experience.</p>
 
 <p align="center">
   <a href="https://react.dev/">
