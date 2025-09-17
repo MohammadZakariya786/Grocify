@@ -66,17 +66,16 @@ The Grocify website features a custom AI chatbot designed for **efficiency, rele
 
 - 📚 **Knowledge Base Integration:**  
   If the user's question does not match any predefined Q&A, the chatbot checks a curated knowledge base for Grocify-related topics.  
-  Relevant questions are sent to the Gemini AI service for context-aware answers.
+  If a relevant topic is found, the chatbot sends the user's question and the matched knowledge base context to the Gemini AI service to generate a context-aware answer.
 
 - ⚡ **API Call Optimization:**  
-  Only calls Gemini AI when needed, reducing API usage and avoiding rate limits.
+  The chatbot only calls the Gemini AI API when a user's question is not covered by the predefined Q&A. This reduces API usage and helps avoid hitting rate limits.
 
 - 🔄 **API Key Rotation:**  
-  Uses three Gemini AI keys; automatically switches if one reaches its limit, ensuring uninterrupted service.
+  The system uses three API keys for Gemini AI. If one key reaches its usage limit, the chatbot automatically switches to the next available key, ensuring uninterrupted       service.
 
 - 🚫 **Domain Restriction:**  
-  If a question is unrelated to Grocify, the chatbot politely responds that it only answers questions related to the Grocify website.
- 
+  If a user's question is unrelated to Grocify and does not match any predefined or knowledge base topics, the chatbot politely responds that it only answers questions        related to the Grocify website. 
 
 > This approach balances **performance, cost, and user experience**, making the chatbot efficient and helpful.
 
