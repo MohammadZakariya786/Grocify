@@ -25,6 +25,7 @@ const Category = () => {
             gsap.from(card,{
                 opacity:0,
                 y:100,
+                transformOrigin:"center center",
                 scale:0.2,
                 duration:1,
                 ease:'back.inOut',
@@ -42,18 +43,19 @@ const Category = () => {
     const categoryCard=category.map(card=>{
         return (
             //card
-            <div className='flex-1 basis-[300px] hover:drop-shadow-2xl container-card gpu-boost' key={card.id}>
+            <div className='flex-1 basis-[300px] container-card gpu-boost'>
+            <div className='  hover:drop-shadow-2xl  gpu-boost' key={card.id}>
                 {/*cardimage*/}
                 <div className='w-full h-[30vh] relative -mb-10'>
-                    <LazyLoadImage
+                    {/* <LazyLoadImage
                               src={card.image}
                               alt={card.title}
                               effect="blur" // 👈 gives a blur placeholder
                               width='100%'
                               height='100%'
-                              className='absolute bottom-0'
-                            />
-                    {/* <img src={card.image}  className='absolute bottom-0' /> */}
+                              className='absolute bottom-0 gpu-boost'
+                            /> */}
+                    <img src={card.image}  className='absolute bottom-0' />
                 </div>
                 {/*cardContent*/}
                 <div className='bg-zinc-100 pt-17 p-8 rounded-xl'>
@@ -61,6 +63,7 @@ const Category = () => {
                     <p className='mt-3 mb-9 text-zinc-600'>{card.description}</p>
                     <Link to={card.path}  className='bg-gradient-to-b from-orange-400 to-orange-500 text-white px-8 py-3 rounded-lg text-lg hover:scale-105 hover:to-orange-600 transition-all duration-300 cursor-pointer'>See All</Link>
                 </div>
+            </div>
             </div>
 
         )

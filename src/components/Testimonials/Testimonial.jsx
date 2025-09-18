@@ -36,7 +36,8 @@ const Testimonial = () => {
              opacity:0,
                 y:100,
                 scale:0.5,
-                duration:0.5,
+                transformOrigin:"center center",
+                duration:1,
                 ease:'power3.out',
                 scrollTrigger:{
                     trigger:".container-card",

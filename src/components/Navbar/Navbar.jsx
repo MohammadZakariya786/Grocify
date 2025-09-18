@@ -47,7 +47,7 @@ const Navbar = () => {
     <header ref={containerRef} style={{ transform: 'translateY(-400px)', opacity: 0 }} className={`bg-white fixed top-0 left-0 right-0  transition-all duration-300 z-100 ${scroll?'drop-shadow-[0_4px_25px_rgba(0,0,0,0.1)]':'null'}`}>
         <nav className='max-w-[1400px] md:h-[14vh]  h-[12vh] items-center px-10 mx-auto flex justify-between'>
             <Link to='/home' className='text-3xl font-semibold' onClick={scrollTop}>Gr<span className='text-orange-500 uppercase'>o</span>cify</Link>
-            <ul className='md:flex items-center gap-x-15 hidden font-semibold tracking-wider text-zinc-800'>
+            <ul className='md:flex items-center  xl:text-lg gap-x-15 hidden font-semibold tracking-wider text-zinc-800'>
                 <li>
                     <Link to="/home" onClick={scrollTopInstant} className='hover:text-orange-500'>Home</Link>
                 </li>

@@ -15,7 +15,8 @@ const Cards = ({image,name,price}) => {
         gsap.from(cardRef.current,{
                 opacity:0,
                 y:100,
-                scale:0.2,
+                transformOrigin:"center center",
+                scale:0.4,
                 duration:1,
                 ease:'power3.out',
                 scrollTrigger:{
@@ -30,7 +31,8 @@ const Cards = ({image,name,price}) => {
 
 
   return (
-    <div ref={cardRef} className="flex flex-col justify-between hover:shadow-xl gpu-boost p-5 bg-zinc-100 rounded-xl">
+    <div ref={cardRef}>
+    <div  className="flex flex-col justify-between hover:shadow-xl gpu-boost p-5 bg-zinc-100 rounded-xl">
         {/* card icons */}
         <div className='flex justify-between'>
             <span className='text-3xl text-zinc-300'>
@@ -42,11 +44,9 @@ const Cards = ({image,name,price}) => {
         </div>
         {/* card image  */}
         <div className='md:w-full flex justify-center md:h-50 md:py-0 py-5'>
-           <LazyLoadImage
+           <img
           src={image}
           alt={name}
-          effect="blur" // 👈 gives a blur placeholder
-          placeholderSrc="/fallback.jpg" // 👈 optional fallback image
           className="w-50 h-50 md:h-50 md:w-full mx-auto object-contain"
         />
         </div>
@@ -57,6 +57,7 @@ const Cards = ({image,name,price}) => {
             <button className=' bg-gradient-to-b from-orange-400 to-orange-500 text-white px-5 py-2 rounded-lg
              text-lg  hover:scale-105 hover:to-orange-600 transition-all duration-300 cursor-pointer'>Shop Now</button>
         </div>
+    </div>
     </div>
   )
 }

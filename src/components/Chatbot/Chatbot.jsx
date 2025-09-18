@@ -41,7 +41,7 @@ function getRelevantKBSnippet(userMessage) {
   if (msg.includes("support") || msg.includes("help") || msg.includes("contact")) snippets.push(knowledgeBase.examples.support);
   if (msg.includes("who made") || msg.includes("creator") || msg.includes("built") || msg.includes("author")) snippets.push(knowledgeBase.examples.creator);
   if (msg.includes("technology") || msg.includes("tech") || msg.includes("framework") || msg.includes("tool")) snippets.push(knowledgeBase.examples.tech);
-  if (msg.includes("products") || msg.includes("items") || msg.includes("groceries") || msg.includes("offer")) snippets.push(knowledgeBase.examples.products);
+  if (msg.includes("products") || msg.includes("items") || msg.includes("sell") || msg.includes("groceries") || msg.includes("offer")) snippets.push(knowledgeBase.examples.products);
 
   // Always include a default KB context if nothing matches
   if (snippets.length === 0) snippets.push(knowledgeBase.context);
