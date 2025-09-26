@@ -43,8 +43,8 @@ const Category = () => {
     const categoryCard=category.map(card=>{
         return (
             //card
-            <div className='flex-1 basis-[300px] container-card gpu-boost'>
-            <div className='  hover:drop-shadow-2xl  gpu-boost' key={card.id}>
+            <div key={card.id} className='flex-1 basis-[300px] container-card gpu-boost'>
+            <div className='  hover:drop-shadow-2xl  gpu-boost'>
                 {/*cardimage*/}
                 <div className='w-full h-[30vh] relative -mb-10'>
                     {/* <LazyLoadImage
