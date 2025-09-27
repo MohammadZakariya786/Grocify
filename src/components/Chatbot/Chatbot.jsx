@@ -82,45 +82,53 @@ const Chatbot = () => {
   } catch (error) {
     console.error("Frontend error:", error);
     return "⚠️ Something went wrong. Please try again later.";
-  }
+  }  
 };
 
 
   const handleSendMessage = async () => {
-    if (inputMessage.trim() === "") return;
+    if (!inputMessage.trim()) return; // ignore empty input
 
-    const userMessage = { text: inputMessage, sender: "user" };
-    setMessages((prev) => [...prev, userMessage]);
-    setInputMessage("");
-    setIsLoading(true);
+  const userMessage = { text: inputMessage, sender: "user" };
+  setMessages((prev) => [...prev, userMessage]);
+  setInputMessage("");
+  setIsLoading(true);
 
-    // 1️⃣ Check local QA
-    const localAnswer = findLocalAnswer(userMessage.text);
-    let botReply = "";
+  let botReply = "";
 
-    if (localAnswer) {
-      // Add a small delay to simulate typing
+  // 1️⃣ Check Local QA first (save API calls)
+  const localAnswer = findLocalAnswer(userMessage.text);
+  if (localAnswer) {
+     // Add a small delay to simulate typing
       await new Promise((resolve) =>
         setTimeout(resolve, 800 + Math.random() * 1200)
       );
-      botReply = localAnswer;
-    } else if (shouldUseGemini(userMessage.text)) {
-      // 2️⃣ Fallback to Gemini if input is valid
+    botReply = localAnswer;
+  } 
+  // 2️⃣ Fallback to Gemini if input is valid
+  else if (shouldUseGemini(userMessage.text)) {
+    try {
       botReply = await generateResponse(userMessage.text);
 
-      // If Gemini fails or returns empty, show final fallback
-      if (!botReply) {
+      // fallback if API fails or returns unexpected data
+      if (!botReply || botReply.toLowerCase().includes("error")) {
         botReply =
           "I don't have specific information about that. I can respond only about our grocery website.";
       }
-    } else {
-      // 3️⃣ If message is invalid for Gemini
+    } catch (err) {
+      console.error("Gemini API error:", err);
       botReply =
         "I don't have specific information about that. I can respond only about our grocery website.";
     }
+  } 
+  // 3️⃣ If input is invalid or gibberish
+  else {
+    botReply =
+      "I don't have specific information about that. I can respond only about our grocery website.";
+  }
 
-    setIsLoading(false);
-    setMessages((prev) => [...prev, { text: botReply, sender: "bot" }]);
+  setIsLoading(false);
+  setMessages((prev) => [...prev, { text: botReply, sender: "bot" }]);
   };
 
   const handleKeyPress = (e) => {
