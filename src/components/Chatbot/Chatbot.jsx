@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import knowledgeBase from "../Chatbot/knowledgeBase.js";
 import localQA from "../Chatbot/localQA.js"; // Local Q&A
 
 
@@ -46,21 +45,22 @@ const Chatbot = () => {
   }, [messages]);
 
 
+ // Call backend /api/generate
   const generateResponse = async (userInput) => {
-  try {
-    const res = await fetch("/api/generate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({userInput}),
-    });
+    try {
+      const res = await fetch("/api/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userInput }), // ✅ only sending userInput
+      });
 
-    const data = await res.json();
-    return data.text;
-  } catch (error) {
-    console.error("Frontend error:", error);
-    return "⚠️ Something went wrong. Please try again later.";
-  }  
-};
+      const data = await res.json();
+      return data.text;
+    } catch (error) {
+      console.error("Frontend error:", error);
+      return "⚠️ Something went wrong. Please try again later.";
+    }
+  };
 
 
   const handleSendMessage = async () => {
