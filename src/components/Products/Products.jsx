@@ -23,11 +23,11 @@ const Products = () => {
             y:50,
             duration:1,
             stagger:0.3,
-            ease:'power1.out',
+            ease:'back.inOut',
             scrollTrigger:{
                 trigger:".category-btn",
-                start:"top 80%",
-                end:"bottom 70%",
+                start:"top 100%",
+                end:"bottom 60%",
                 // markers:true,
                 scrub:2
             }
@@ -88,7 +88,7 @@ const Products = () => {
                     return (
                         <div
                             key={category}
-                            className={`${activeTab === category ? "grid" : "hidden"} grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-9 mt-20`}
+                            className={`${activeTab === category ? "grid" : "hidden"} grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-9 gap-5 mt-20`}
                         >
                             {filteredItems.slice(0, 8).map(product => (
                                 <Cards

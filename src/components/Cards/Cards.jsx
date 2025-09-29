@@ -16,15 +16,15 @@ const Cards = ({image,name,price}) => {
                 opacity:0,
                 y:100,
                 transformOrigin:"center center",
-                scale:0.4,
+                scale:0.7,
                 duration:1,
-                ease:'power3.out',
+                ease:'back.inOut',
                 scrollTrigger:{
                     trigger:cardRef.current,
-                    start:"top 130% ",
-                    end:"bottom 100%",
+                    start:"top 150% ",
+                    end:"bottom 90%",
                     // markers:true,
-                    scrub:1,
+                    scrub:2,
                 }
     })
 },[])
@@ -32,7 +32,7 @@ const Cards = ({image,name,price}) => {
 
   return (
     <div ref={cardRef}>
-    <div  className="flex flex-col justify-between hover:shadow-xl gpu-boost p-5 bg-zinc-100 rounded-xl">
+    <div  className="flex flex-col justify-between hover:shadow-xl active:shadow-xl gpu-boost p-5 bg-zinc-100 rounded-xl">
         {/* card icons */}
         <div className='flex justify-between'>
             <span className='text-3xl text-zinc-300'>

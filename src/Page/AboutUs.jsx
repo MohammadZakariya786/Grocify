@@ -47,20 +47,20 @@ const AboutUs = () => {
                 <h1 className='text-1 md:text-6xl text-4xl font-bold text-orange-600'>
                     About <span className='text-zinc-800'>Us</span>
                 </h1>
-                <p className='text-2 text-zinc-600 md:text-xl mt-5 md:pb-10 pb-5 max-w-[500px]'>We're passionate about bringing you the finest products with exceptional service. Our journey started with a simple vision: to make quality accessible to everyone.</p>
+                <p className='text-2 text-zinc-600 lg:text-xl mt-5 md:pb-10 pb-5 max-w-[500px]'>We're passionate about bringing you the finest products with exceptional service. Our journey started with a simple vision: to make quality accessible to everyone.</p>
             </div>
-            <div className='flex gap-x-8 text-center'>
+            <div className='flex gap-x-8 md:gap-x-6 lg:gap-x-8 text-center'>
                 <div className='text-3'>
-                <h3 className='md:text-3xl text-2xl  text-orange-500 font-bold'>50K+</h3>
-                <p className='text-zinc-600 md:text-lg text-xs'>Happy Customers</p>
+                <h3 className='lg:text-3xl text-2xl  text-orange-500 font-bold'>50K+</h3>
+                <p className='text-zinc-600 lg:text-lg text-xs md:text-sm'>Happy Customers</p>
                 </div>
                 <div className='text-3'>
-                <h3 className='md:text-3xl text-2xl text-orange-500  font-bold'>10+</h3>
-                <p className='text-zinc-600 md:text-lg text-xs'>Years Experience</p>
+                <h3 className='lg:text-3xl text-2xl text-orange-500  font-bold'>10+</h3>
+                <p className='text-zinc-600 lg:text-lg text-xs md:text-sm'>Years Experience</p>
                 </div>
                 <div className='text-3'>
-                <h3 className='md:text-3xl text-2xl text-orange-500  font-bold'>25+</h3>
-                <p className='text-zinc-600 md:text-lg text-xs'>Countries</p>
+                <h3 className='lg:text-3xl text-2xl text-orange-500  font-bold'>25+</h3>
+                <p className='text-zinc-600 lg:text-lg text-xs md:text-sm'>Countries</p>
                 </div>
             </div>
             <div className='text-2 flex items-center md:mt-7 mt-5'>
@@ -72,9 +72,10 @@ const AboutUs = () => {
         <div className='relative container-img gpu-boost'>
             <img 
             src={aboutus}
-            className='md:h-full h-[400px] w-full object-contain '/>
-            <div className='absolute  md:bottom-29 bottom-20 -left-15  bg-orange-600 text-center md:p-5
-            p-3 md:pl-4 pl-10 rounded-xl'><h3 className='text-white font-bold md:text-2xl text-lg'>200%</h3>
+            className='md:h-full h-[400px] w-full object-contain  '/>
+            <div className='absolute  lg:bottom-29 md:bottom-5 md:-z-10 lg:z-10 bottom-20 -left-15 
+            md:left-[35%] lg:-left-[10%]   bg-orange-600 text-center md:p-5
+            p-3 md:px-4 pl-10  md:pt-20 lg:pt-5 rounded-xl'><h3 className='text-white font-bold md:text-2xl text-lg'>200%</h3>
             <p className='text-white md:text-md text-xs'>Growth Rate</p></div>
 
         </div>

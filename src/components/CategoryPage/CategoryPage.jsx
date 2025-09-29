@@ -15,7 +15,7 @@ const CategoryPage = ({title,bgImage,categories=[]}) => {
   return (
     <div>
         <Banner title={title} bgImage={bgImage}/>
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-9 py-20 max-w-[1400px] mx-auto px-10'>
+        <div className='grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-9 py-20 max-w-[1400px] mx-auto px-5'>
             {renderProduct}
         </div>
     </div>

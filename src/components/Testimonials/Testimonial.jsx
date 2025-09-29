@@ -35,15 +35,15 @@ const Testimonial = () => {
         gsap.from(".container-card",{
              opacity:0,
                 y:100,
-                scale:0.5,
+                scale:0.7,
                 transformOrigin:"center center",
                 duration:1,
-                ease:'power3.out',
+                ease:'back.inOut',
                 scrollTrigger:{
                     trigger:".container-card",
                     scrub:1,
                     // markers:true,
-                    start:"top 100%",
+                    start:"top 150%",
                     end:"bottom 90%"
                 }
         })

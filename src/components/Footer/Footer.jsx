@@ -40,9 +40,10 @@ const Footer = () => {
                 <p className='mt-6 text-zinc-600 '>Questions or Feedback?<br/>
                 We'd love to hear from you.
                 </p>
-              <div className='p-1 rounded-lg mt-6 flex justify-center items-center'>
-                <input className='bg-white h-[6vh] pl-4 flex-1 focus:outline-none' type="email" name='email' id='email' autoComplete='off' placeholder='Email Address'/>
-                <button className='bg-gradient-to-b from-orange-400 to-orange-500 text-white rounded-lg             p-2 text-2xl hover:to-orange-600'><IoIosArrowForward/></button>
+              <div className='p-1 rounded-lg h-[6vh] mt-6 flex justify-center items-center'>
+                <input className='bg-white  pl-4 py-5 h-full  flex-1 focus:outline-orange-500 rounded-l-xl' type="email" name='email' id='email' autoComplete='off' placeholder='Email Address'/>
+                <button className='bg-gradient-to-b from-orange-400 to-orange-500 text-white 
+                 rounded-r-xl flex justify-center items-center      px-2 py-5 text-2xl h-full  hover:to-orange-600'><IoIosArrowForward/></button>
               </div>
           </div>
         </div>
