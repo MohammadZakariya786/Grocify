@@ -33,7 +33,7 @@ const Category = () => {
                     trigger:card,
                     start:"top 150%",
                     end:"bottom 90%",
-                    markers:true,
+                    // markers:true,
                     scrub:2,
                 }
             })
