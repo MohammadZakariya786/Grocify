@@ -68,9 +68,11 @@ ${getRelevantKBSnippet(userInput)}
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               contents: [
-                { role: "system", parts: [{ text: systemPrompt }] },
-                { role: "user", parts: [{ text: `User Question: ${userInput}` }] },
-              ],
+                {
+                  role: "user",
+                  parts: [{ text: `${systemPrompt}\nUser Question: ${userInput}` }]
+                }
+              ]
             }),
           }
         );
