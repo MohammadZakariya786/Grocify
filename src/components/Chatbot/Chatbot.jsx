@@ -30,25 +30,6 @@ function shouldUseGemini(message) {
   return true;
 }
 
-// Smarter KB snippet extraction
-function getRelevantKBSnippet(userMessage) {
-  const msg = userMessage.toLowerCase();
-  const snippets = [];
-
-  if (msg.includes("payment") || msg.includes("pay")) snippets.push(knowledgeBase.examples.payment);
-  if (msg.includes("delivery") || msg.includes("ship") || msg.includes("order")) snippets.push(knowledgeBase.examples.delivery);
-  if (msg.includes("return") || msg.includes("refund")) snippets.push(knowledgeBase.examples.returns);
-  if (msg.includes("support") || msg.includes("help") || msg.includes("contact")) snippets.push(knowledgeBase.examples.support);
-  if (msg.includes("who made") || msg.includes("creator") || msg.includes("built") || msg.includes("author")) snippets.push(knowledgeBase.examples.creator);
-  if (msg.includes("technology") || msg.includes("tech") || msg.includes("framework") || msg.includes("tool")) snippets.push(knowledgeBase.examples.tech);
-  if (msg.includes("products") || msg.includes("items") || msg.includes("sell") || msg.includes("groceries") || msg.includes("offer")) snippets.push(knowledgeBase.examples.products);
-
-  // Always include a default KB context if nothing matches
-  if (snippets.length === 0) snippets.push(knowledgeBase.context);
-
-  return snippets.join("\n\n");
-}
-
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -70,11 +51,7 @@ const Chatbot = () => {
     const res = await fetch("/api/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        userInput,
-        kbRules: knowledgeBase.rules,
-        kbSnippet: getRelevantKBSnippet(userInput),
-      }),
+      body: JSON.stringify({userInput}),
     });
 
     const data = await res.json();
